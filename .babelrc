@@ -1,0 +1,19 @@
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]   
+}
+
+// {
+//     "presets": ["@babel/preset-env", "@babel/preset-react"],
+//     "plugins": [
+//         ["transform-runtime", {
+//           "regenerator": true
+//         }]
+//       ]
+// }
+
+// {
+//     "presets": ["@babel/preset-env"],
+//     "plugins": [
+//         ["@babel/transform-runtime"]
+//     ]
+// }
