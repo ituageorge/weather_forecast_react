@@ -118,7 +118,7 @@ const WeatherForecast = () => {
   };
 
   useEffect(() => {
-    forecastedWeather()
+    forecastedWeather(); 
   }, []);
 
   const handleChange = (e) => {
@@ -131,6 +131,7 @@ const WeatherForecast = () => {
     e.preventDefault();
     setLoading(true);
     forecastedWeather()
+   
   };
 
   
@@ -141,10 +142,10 @@ const WeatherForecast = () => {
       <div className="container-fluid home">
         
         <div className="container rounded px-2">
-          <div className="row first_second px-2">
+          <div className="row px-2">
             <div className="col-md-8 first">
-              <div className="row ">
-                <div className="col justify-content-md-center">
+              <div className="m-5 ">
+                <div className=" justify-content-md-center">
                   <h1 className="text-center">Weather Forecast</h1>
                 </div>
                 {/* <div className="col"> */}
@@ -154,9 +155,9 @@ const WeatherForecast = () => {
                 <input type="text" className="form-control" id="pwd"/>
               </div>  */}
 
-                <div className="col-md-6 p-5">
+                <div className="">
                   <form
-                    className="form-inline mr-auto mb-4"
+                    className="form-inline mr-auto mb-4 justify-content-center"
                     onSubmit={getWeatherInfo}
                   >
                     <div className="">
@@ -182,20 +183,20 @@ const WeatherForecast = () => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th className="py-5" scope="col">
+                    <th className="py-2" scope="col">
                       Time
                     </th>
-                    <th className="py-5" scope="col">
+                    <th className="py-2" scope="col">
                       humidity(%)
                     </th>
 
-                    <th className="py-5" scope="col">
+                    <th className="py-2" scope="col">
                       temp(oC)
                     </th>
-                    <th className="py-5" scope="col">
+                    <th className="py-2" scope="col">
                       weather
                     </th>
-                    <th className="py-5" scope="col">
+                    <th className="py-2" scope="col">
                       description
                     </th>
                   </tr>
@@ -205,7 +206,7 @@ const WeatherForecast = () => {
             </div>
 
             <div className="col-md-4 second">
-              <div className="row  ">
+              <div className="row ">
                 <div className="col-md-8 justify-content-center text-center d-flex present_date">
                   <div className=" ">
                     <img
