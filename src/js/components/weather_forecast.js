@@ -113,6 +113,7 @@ const WeatherForecast = () => {
   }, []);
 
   const handleChange = (e) => {
+    e.preventDefault()
     setCity(e.target.value);
     console.log('cityChange', city);
   };

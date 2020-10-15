@@ -10,6 +10,7 @@ const ModalError = ({
   getWeatherInfo,
 }) => {
 
+  
   return (
     <div className="">
       
