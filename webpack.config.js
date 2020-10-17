@@ -4,6 +4,14 @@ const {SourceMapDevToolPlugin} = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
+var server_port = process.env.YOUR_PORT || process.env.PORT || 5000;
+var server_host = process.env.YOUR_HOST || "0.0.0.0";
+// const webpack = require('webpack');
+// const dotenv = require('dotenv');
+// const defineVariablesPlugin = new webpack.DefinePlugin({
+//   'process.env.PORT': JSON.stringify(process.env.PORT)
+// })
+
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
@@ -13,7 +21,10 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    
+    port: server_port,
+    host: server_host
+    // port: 8080,
+    // hot: true,
   },
   module: {
     rules: [
@@ -92,5 +103,6 @@ module.exports = {
     new SourceMapDevToolPlugin({
       filename: '[file].map',
     }),
+    // defineVariablesPlugin,
   ],
 };
